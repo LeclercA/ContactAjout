@@ -45,7 +45,7 @@ namespace ContactAjout.Controllers
             if (ModelState.IsValid)
             {
                 NouveauContact(model.Nom, model.Email, model.Commentaire);
-                TempData["attention"] = "Votre requête a été envoyé.";
+                TempData["attention"] = "Votre requête a été envoyée.";
                 return RedirectToAction("Index", "Home");
             }
             return View();
