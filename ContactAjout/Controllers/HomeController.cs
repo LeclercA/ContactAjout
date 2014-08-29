@@ -32,7 +32,7 @@ namespace ContactAjout.Controllers
         [HttpGet]
         public ActionResult AjoutContact()
         {
-            ViewBag.Message = "Votre page d'ajoutcde contact.";
+            ViewBag.Message = "Votre page d'ajout de contact.";
 
             return View();
 
@@ -44,8 +44,8 @@ namespace ContactAjout.Controllers
         {
             if (ModelState.IsValid)
             {
-                //NouveauContact(model.Nom, model.Email, model.Commentaire);
-                //TempData["attention"] = "Votre requête a été envoyé.";
+                NouveauContact(model.Nom, model.Email, model.Commentaire);
+                TempData["attention"] = "Votre requête a été envoyé.";
                 return RedirectToAction("Index", "Home");
             }
             return View();
@@ -53,7 +53,7 @@ namespace ContactAjout.Controllers
 
         private void NouveauContact(string Nom, string Email, string Commentaire)
         {
-
+            //rien encore ici
         }
     }
 }

@@ -18,10 +18,7 @@ namespace ContactAjout
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 
-                routes.MapRoute(
-                 "AjoutContact",
-                "",
-               new { controller = "AjoutContact", action = "Index" }
+                routes.MapRoute("AjoutContact", "", new { controller = "AjoutContact", action = "Index" }
             );
         }
     }

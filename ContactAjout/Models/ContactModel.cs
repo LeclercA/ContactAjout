@@ -12,7 +12,7 @@ namespace ContactAjout.Models
         public string Nom { get; set; }
 
         [Required(ErrorMessage = "Ce champ est obligatoire")]
-
+        [RegularExpression(@".*@.*", ErrorMessage="Entrez une adresse électronique valide")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Ce champ est obligatoire")]

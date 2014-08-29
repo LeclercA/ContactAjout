@@ -33,6 +33,10 @@
         <div id="body">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
+                @if (TempData["attention"] != null)
+                {
+                   <h2>@TempData["attention"]</h2>
+                }
                 @RenderBody()
             </section>
         </div>

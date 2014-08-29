@@ -1,23 +1,23 @@
-﻿
+﻿@model ContactAjout.Models.ContactModel
 @{
-    ViewBag.Title = "AjoutContact";
+    ViewBag.Title = "Ajout de contact";
 }
 
 <h2>AjoutContact</h2>
 
 @using (Html.BeginForm())
 {
-	@Html.Label("Nom")<br />
-	@Html.TextBox("Nom")<br />
-	@Html.ValidationMessage("Nom")<br />
+	@Html.LabelFor(model => model.Nom)<br />
+	@Html.TextBoxFor(model => model.Nom)<br />
+	@Html.ValidationMessageFor(model => model.Nom)<br />
 	
-	@Html.Label("Email")<br />
-	@Html.TextBox("Email")<br />
-	@Html.ValidationMessage("Email")<br />
+	@Html.LabelFor(model => model.Email)<br />
+	@Html.TextBoxFor(model => model.Email)<br />
+	@Html.ValidationMessageFor(model => model.Email)<br />
 	
-	@Html.Label("Commentaire")<br />
-	@Html.TextArea("Commentaire")<br />
-	@Html.ValidationMessage("Commentaire")<br />
+	@Html.LabelFor(model => model.Commentaire)<br />
+	@Html.TextAreaFor(model => model.Commentaire)<br />
+	@Html.ValidationMessageFor(model => model.Commentaire)<br />
 	
 	<button type="submit">Soumettre</button>
 }
